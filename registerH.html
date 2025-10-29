@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" >
+</head>
+
+<!-- This is the opening <body> tag, which holds all the visible content. -->
+<!-- The 'class' attributes are from Tailwind CSS:  -->
+<!-- 'bg-gray-100': Sets a light gray background color for the whole page.  -->
+<!-- 'flex': Turns the body into a "flexbox" container, which is a modern way to align content.  -->
+<!-- 'items-center': Vertically centers the content (the form) in the middle of the screen.  -->
+<!-- 'justify-center': Horizontally centers the content (the form) in the middle of the screen.  -->
+<!-- 'h-screen': Sets the height of the body to be 100% of the screen's height.  -->
+<!-- (The combination of flex, items-center, justify-center, and h-screen is how we center the form perfectly on the page).  -->
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <!-- This <div> is the white box (the "card") that holds the registration form.  -->
+    <!-- Tailwind classes:  -->
+    <!-- 'bg-white': Sets the background color to white.  -->
+    <!-- 'p-8': Adds 8 units of padding (space) inside the box.  -->
+    <!-- 'rounded': Adds rounded corners to the box.  -->
+    <!-- 'shadow-md': Adds a medium-sized drop shadow for a "floating" effect.  -->
+    <!-- 'w-96': Sets a fixed width for the box (96 units, or 24rem).  -->
+    <div class="bg-white p-8 rounded shadow-md w-96">
+    
+        <!-- This <h1> tag is the main heading for the form.  -->
+        <!-- 'text-2xl': Makes the text size "extra large".  -->
+        <!-- 'font-semibold': Makes the text "semi-bold".  -->
+        <!-- 'mb-6': Adds a 'margin-bottom' (space below the heading).  -->
+        <!-- 'text-center': Centers the text.  -->
+        <h1 class="text-2xl font-semibold mb-6 text-center">Register</h1>
+        
+        <!--  This is the opening <form> tag to collect the user's registration details.  -->
+        <form>
+            <!--  An <input> for the username. 'type="text"' is a standard text box.  -->
+            <!--  'placeholder' is the gray text that appears inside before typing.  -->
+            <!--  'required' means the form won't submit if this is empty.  -->
+            <!--  'class="..."': These Tailwind classes style the input box (full width, padding, border, etc.).  -->
+            <input type="text" id="username" placeholder="Username" required class="w-full p-3 mb-4 border rounded">
+            
+            <!--  An <input> for the email. 'type="email"' tells the browser to check for a valid email format (like "name@example.com").  -->
+            <input type="email" id="email" placeholder="Email" required class="w-full p-3 mb-4 border rounded">
+            
+            <!--  An <input> for the password. 'type="password"' hides the characters (shows ••••).  -->
+            <input type="password" id="password" placeholder="Password" required class="w-full p-3 mb-4 border rounded">
+            
+            <!--  A second <input> for password confirmation.  -->
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required class="w-full p-3 mb-4 border rounded">
+            
+            <!--  A <label> for the Date of Birth input. 'for="dob"' links it to the input with 'id="dob"'.  -->
+            <label for="dob" class="block mb-2 text-sm font-medium text-gray-700">Date of Birth</label>
+            
+            <!--  An <input> for the date. 'type="date"' shows a calendar date picker in the browser.  -->
+            <input type="date" id="dob" name="dob" required class="w-full p-3 mb-4 border rounded">
+            
+            <!-- The "Register" button. 'type="submit"' tells it to submit the form.  -->
+            <!-- 'transition-colors': Adds a smooth fade effect when the color changes (like on hover).  -->
+            <button type="submit" class="w-full p-3 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors">Register</button>
+            
+            <!-- A hyperlink <a> tag that links back to the 'login.html' page.  -->
+            <!-- 'block': Makes it fill its own line.  -->
+            <!-- 'text-center': Centers the text.  -->
+            <!-- 'mt-4': Adds 'margin-top' (space above it).  -->
+            <a href="login.html" class="block text-center mt-4 text-blue-500 hover:underline">Already have an account? Login</a>
+            
+        <!-- COMMENT_START This is the closing </form> tag. COMMENT_END -->
+        </form>
+        
+    <!-- COMMENT_START This is the closing </div> tag for the white card. COMMENT_END -->
+    </div> 
+
+<!-- COMMENT_START This is the closing </body> tag. COMMENT_END -->
+</body>
+
+<!-- COMMENT_START This is the closing </html> tag, ending the entire document. COMMENT_END -->
+</html>

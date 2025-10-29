@@ -1,0 +1,84 @@
+<!-- Ilya Zeldner -->
+<!-- This first line tells the browser that the document is an HTML5 page. COMMENT_END -->
+<!DOCTYPE html>
+<!-- This is the opening <html> tag, setting the language to English. -->
+<html lang="en">
+
+<!-- This is the opening <head> tag, which holds hidden setup information (metadata).  -->
+<head> 
+    <!-- This meta tag sets the character encoding to UTF-8, allowing special characters and emojis. -->
+    <meta charset="UTF-8">
+    
+
+    <!-- This meta tag makes the website responsive, so it looks good on mobile phones. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- This tag sets the title that appears in the browser tab.  -->
+    <title>Login</title>
+    
+    <!-- This line links to an external CSS library called Tailwind for quick styling. -->
+    <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" >
+    
+    <!-- This line links to your own custom stylesheet named "style.css".-->
+    <link rel="stylesheet" href="style.css">
+
+<!-- This is the closing </head> tag. -->
+</head>
+
+<!--  This is the opening <body> tag, which holds all the visible content of the page.  -->
+<!--  The 'class="content"' is a custom class you can use in "style.css".  -->
+<body class="content">
+
+    <!-- This <div> is a container, likely used in "style.css" to center the form.  -->
+    <div class="container">
+    
+        <!--  This <h1> tag is the main heading for this section.  -->
+        <h1>Login</h1>
+        
+        <!--  This is the opening <form> tag, which collects user input.  -->
+        <form>
+        
+            <!--  This <label> provides a visible name for the input field below.  -->
+            <!--  'for="userInput"' links this label to the input with 'id="userInput"'.  -->
+            <label for="userInput">Username or Email</label>
+            
+            <!-- This <input> is a text box for the user to type in.  -->
+            <!-- 'id="userInput"' is its unique ID. 'required' means the form won't submit if it's empty.  -->
+            <input type="text" id="userInput" required />
+            
+            <!--  This <label> is for the password input field.  -->
+            <label for="passInput">Password</label>
+            
+            <!--  This <input> is for the password. 'type="password"' hides the characters (shows ••••).  -->
+            <!--  'id="passInput"' is its unique ID. 'required' makes it mandatory.  -->
+            <input type="password" id="passInput" required />
+            
+            <!--
+                This <button> is the login button. 'type="submit"' tells it to submit the form. 
+                All the 'class' attributes are from the Tailwind library for styling (color, size, etc.). 
+            -->
+            <button type="submit" class="w-full p-3 bg-blue-500 text-white rounded hover:bg-blue-600">Login</button>
+            <!--
+                This <a> tag is a hyperlink. 'href="register.html"' tells it to go to the register page. 
+                The 'class' attributes from Tailwind are used to make this link look like a gray button.          
+            -->
+            <a href="register.html" class="block text-center w-full p-3 mt-4 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">Register</a>
+            
+            <!--
+                This <a> tag is the "Forgot Password?" link.
+                'href="#"' is a placeholder link that doesn't go anywhere (often used with JavaScript).
+                The 'class' attributes style it as a blue link aligned to the right.
+            -->  
+            <a href="#" class="block text-right mt-4 text-blue-500 hover:underline">Forgot Password?</a>
+            
+        <!--This is t`he closing </form> tag.-->  
+        </form>
+        
+    <!--This is the closing </div> tag.-->  
+    </div>
+    
+    <!-- This is the closing </body> tag. -->
+</body>
+
+<!--This is the closing </html> tag, ending the entire document. --> 
+</html>
