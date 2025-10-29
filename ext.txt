@@ -1,0 +1,17 @@
+​Live Server : For launching your website (HTML/CSS/JS) in a browser.
+​Code Runner : For quickly testing script files (like .js) inside VS Code.
+Prettier: Auto-formats your code.
+​Auto Rename Tag: Auto-fixes your closing HTML tags.
+​ESLint: Checks your JavaScript for errors.
+​Path Intellisense: Auto-completes your file paths.
+
+Git + GitHub
+
+1. GitGraph : shows you a visual graph of your Git history. We can see all  branches, commits, and merges 
+in a simple diagram.
+​2. GitLens : one of the most popular extensions for VS Code. 
+It's like a magnifying glass for code's history. Its most famous feature is "Git blame." 
+It shows who changed a specific line of code and when they did it, right in the editor. 
+​3. GitHub Pull Requests and Issues  : ​This extension brings the GitHub website inside our editor.
+​This is essential for teamwork.This extension lets review each other's code (called "Pull Requests") 
+and manage tasks without leaving VS Code.
