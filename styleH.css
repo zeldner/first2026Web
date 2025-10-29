@@ -1,0 +1,95 @@
+/* 
+This selector targets the element with 'class="content"'.
+In HTML, this is the <body> tag, so this styles the entire page.
+ */
+.content{
+   /*  Sets the default font to Arial. If Arial isn't available, it uses a generic sans-serif font.  */
+   font-family: Arial, sans-serif; 
+   
+   /*  Sets the background color of the whole page to a light gray.  */
+   background-color: #f0f0f0;
+   
+   /*  This 'display: flex' is the key to centering. It turns the <body> into a flex container.  */
+   display: flex;
+
+   /*  Now that it's a flex container, 'align-items: center' vertically centers its children (the .container div).  */
+   align-items: center;
+   
+   /*  'justify-content: center' horizontally centers its children.  */
+   justify-content: center;
+   
+   /*  'height: 100vh' sets the <body> height to 100% of the viewport (screen) height.  */
+   /*  This is necessary for the vertical centering to work and fill the whole page.  */
+   height: 100vh;
+   
+   /*  Removes the default margin that browsers add, preventing any unwanted white space around the edges.  */
+   margin: 0;
+}
+
+/* 
+This selector targets the element with 'class="container"'.
+This is the white box that holds your form.
+ */
+.container{
+    /*  Sets the background of the form container to white, so it stands out.  */
+    background-color: #fff;
+    
+    /*  Adds 20 pixels of space (padding) inside the container, pushing the content away from the edges.  */
+    padding: 20px;
+    
+    /*  Rounds the corners of the white box by 8 pixels.  */
+    border-radius: 8px;
+    
+    /*  Adds a shadow effect to make the container "float." (10px blur, black color with 50% opacity).  */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    
+    /*  Sets a fixed width for the form container.  */
+    width: 300px;
+}
+
+/* 
+This is a descendant selector. It targets only the <h1> element
+that is inside an element with 'class="content"'.
+ */
+.content h1{
+    /*  Makes the heading text bold.  */
+    font-weight: bold;
+    
+    /*  Makes the heading text "extra extra large."  */
+    font-size: xx-large;
+    
+    /*  Adds 20 pixels of space below the heading, pushing the inputs down.  */
+    margin-bottom: 20px;
+    
+    /*  Sets the text color to a dark gray. COMMENT_END */
+    color: #333;
+}
+
+/*
+This selector targets all <input> elements
+that are inside an element with 'class="container"'.
+*/
+.container input{
+    /*  Makes the input fields take up 100% of the container's width.  */
+    width: 100%;
+    
+    /*  Adds 10 pixels of padding inside the input fields (making them taller).  */
+    padding: 10px;
+    
+    /*  Adds 10px of margin to the top/bottom and 0px to the left/right. This separates the input fields.  */
+    margin: 10px 0;
+    
+    /*  Adds a 1-pixel, solid, light gray border around the input fields.  */
+    border: 1px solid #ccc;
+    
+    /*  Slightly rounds the corners of the input fields.  */
+    border-radius: 4px;
+    
+    /* This is a very important rule! It tells the browser that the 'width: 100%' 
+                  should include the padding and border. Without this, the inputs would
+                  be wider than the container.  */
+    box-sizing: border-box;
+    
+    /*  Sets the color of the text that the user types to dark gray.  */
+    color: #333;
+}
