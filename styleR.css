@@ -1,0 +1,118 @@
+/* Ilya Zeldner */
+/* GLOBAL VARIABLES (:root)
+   Defining colors as variables ensures consistency across the app.
+*/
+:root {
+  --bg-page: #f3f4f6; /* Light gray background */
+  --bg-card: #ffffff; /* Pure white for the card */
+  --primary-blue: #3b82f6; /* Standard blue color */
+  --hover-blue: #2563eb; /* Darker blue for hover states */
+  --text-main: #1f2937; /* Dark gray for text */
+  --border-color: #d1d5db; /* Light gray for borders */
+}
+
+/* BODY STYLING
+   Using Flexbox to center the card exactly in the middle of the screen.
+*/
+body {
+  background-color: var(--bg-page);
+  margin: 0; /* Removes default browser margins */
+  display: flex; /* Enables Flexbox layout */
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+  height: 100vh; /* Takes up 100% of the screen height */
+  font-family: sans-serif; /* Modern, clean font stack */
+}
+
+/* REGISTER CARD (The white box)
+*/
+.register-card {
+  background-color: var(--bg-card);
+  padding: 2rem; /* Internal space (32px) */
+  border-radius: 0.5rem; /* Rounded corners (8px) */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Subtle depth shadow */
+  width: 100%; /* Makes it mobile-responsive */
+  max-width: 400px; /* Limits the width on large screens */
+  box-sizing: border-box; /* Includes padding in the total width */
+}
+
+/* HEADING (H1)
+*/
+h1 {
+  font-size: 1.5rem; /* 24px font size */
+  font-weight: 600; /* Semi-bold text */
+  margin-bottom: 1.5rem; /* Space below the title */
+  text-align: center; /* Centers the text */
+  color: var(--text-main);
+  margin-top: 0; /* Removes default top margin */
+}
+
+/* INPUT FIELDS
+*/
+input {
+  width: 100%; /* Makes input take the full width of the card */
+  padding: 0.75rem; /* Internal typing space */
+  margin-bottom: 1rem; /* Space between input fields */
+  border: 1px solid var(--border-color); /* Light gray border */
+  border-radius: 0.25rem; /* Slightly rounded corners */
+  box-sizing: border-box; /* Ensures padding doesn't break the layout */
+  font-size: 1rem;
+  outline: none; /* Removes the default focus ring */
+  transition: border-color 0.2s; /* Smooth transition for hover/focus */
+}
+
+/* FOCUS STATE: When user clicks into an input field */
+input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); /* Soft blue glow */
+}
+
+/* LABEL: Specifically for the Date of Birth field
+*/
+label {
+  display: block; /* Puts label on its own line */
+  margin-bottom: 0.5rem; /* Space between label and date picker */
+  font-size: 0.875rem; /* Smaller text for labels */
+  font-weight: 500; /* Medium weight text */
+  color: #374151; /* Dark gray for readability */
+}
+
+/* REGISTER BUTTON
+*/
+button {
+  width: 100%; /* Full width button */
+  padding: 0.75rem;
+  background-color: var(--primary-blue);
+  color: white; /* High contrast white text */
+  border: none; /* Removes browser's default border */
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer; /* Changes cursor to 'hand' on hover */
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+button:hover {
+  background-color: var(--hover-blue); /* Darker blue when mouse is over */
+}
+
+button:active {
+  transform: scale(0.98); /* Slight shrink effect when clicked */
+}
+
+/* FOOTER LINK: "Already have an account? Login"
+*/
+.login-link {
+  display: block; /* Allows centering and margin */
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--primary-blue);
+  text-decoration: none; /* Removes default underline */
+  font-size: 0.875rem;
+}
+
+.login-link:hover {
+  text-decoration: underline; /* Re-adds underline only on hover */
+}
